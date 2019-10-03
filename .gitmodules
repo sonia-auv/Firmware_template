@@ -1,0 +1,3 @@
+[submodule "src/Firmware_utility"]
+	path = src/Firmware_utility
+	url = git@github.com:sonia-auv/Firmware_utility.git
