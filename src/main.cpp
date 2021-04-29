@@ -4,34 +4,27 @@
  * 
  ***/
 
-#include "mbed.h"
-#include "rtos.h"
- 
-InterruptIn button(PC_13);
-DigitalOut led(LED2);
-DigitalOut flash(LED3);
-Thread thread;
- 
-void interrupt() {
-    thread.flags_set(0x1);
-}
+#include "main.h"
 
+//RS485 declaration
+RS485 rs(SLAVE_XXX);
+
+//Declaration of threads
+Thread thread;
+
+//Insert all function thread here
 void threadFunction()
 {
+  //Declaration, only put one command per thread
   while(1)
   {
-    ThisThread::flags_wait_any(0x1);
-    led = !led;
+    //rs.read, action & rs.write
   }
 }
  
-int main() {
-    thread.start(threadFunction);
-    thread.set_priority(osPriorityLow);
-
-    button.rise(&interrupt);  // attach the address of the flip function to the rising edge
-    while(1) {           // wait around, interrupts will interrupt this!
-        flash = !flash;
-        ThisThread::sleep_for(250);
-    }
+int main()
+{
+  //Declaration of all the thread (linked to one function)
+  thread.start(threadFunction);
+  thread.set_priority(osPriorityHigh);
 }
