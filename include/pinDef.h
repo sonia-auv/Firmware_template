@@ -5,6 +5,7 @@
 //              BOARD PIN DEFINITION
 //###################################################
 
+//Declare all hardware pins definition
 
 //###################################################
 //              RS485 PIN DEFINITION
