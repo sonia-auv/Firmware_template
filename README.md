@@ -13,4 +13,6 @@ As of 2023, platform io has a bug where it will not download mebedOS full. So fa
 You may download MbedOS 5 from here: https://etsmtl365.sharepoint.com/:u:/s/CLUB-SONIA-GTO365/ERkumGq4ajRKpL84vJ7AhXcBgjgsxvdq-JVK0-smLZ5NpA?e=QomwSw
 
 
-The mbed OS folder needs to be copied to your .platformio\packages folder in your home dirrectory. For example, on windows that would be `C:\Users\sonia-ele\.platformio\packages`. On linux that would be `/home/sonia-ele/.platformio/packages`. Replace `sonia-ele` your username. 
+The mbed OS folder needs to be copied to your .platformio\packages folder in your home dirrectory. For example, on windows that would be `C:\Users\sonia-ele\.platformio\packages`. On linux that would be `/home/sonia-ele/.platformio/packages`. Replace `sonia-ele` your username.
+
+This procedure should whould only be required once on every computer.
